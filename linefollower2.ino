@@ -45,7 +45,7 @@ right_sensor_state3 = analogRead(right_sensor_pin3);
 right_sensor_state4 = analogRead(right_sensor_pin4);
 
 
-if(right_sensor_state3 < 500 && right_sensor_state4 < 500 && left_sensor_state1 > 500 && right_sensor_state2 < 500)
+if(right_sensor_state3 < 500 && right_sensor_state4 < 500 && left_sensor_state1 > 500 && left_sensor_state2 < 500)
 {
   Serial.println("turning right");
 
@@ -58,7 +58,7 @@ if(right_sensor_state3 < 500 && right_sensor_state4 < 500 && left_sensor_state1 
   analogWrite (motorBspeed,200);
   
   }
-if(right_sensor_state3 > 500 && right_sensor_state4 > 500 && left_sensor_state1 < 500 && right_sensor_state2 < 500)
+if(right_sensor_state3 > 500 && right_sensor_state4 > 500 && left_sensor_state1 < 500 && left_sensor_state2 < 500)
 {
   Serial.println("turning left");
   
@@ -73,7 +73,7 @@ if(right_sensor_state3 > 500 && right_sensor_state4 > 500 && left_sensor_state1 
   delay(turn_delay);
   }
 
-if(right_sensor_state3 < 500 && right_sensor_state4 > 500 && left_sensor_state1 > 500 && right_sensor_state2 < 500)
+if(right_sensor_state3 < 500 && right_sensor_state4 > 500 && left_sensor_state1 > 500 && left_sensor_state2 < 500)
 {
   Serial.println("going forward");
 
@@ -89,7 +89,7 @@ if(right_sensor_state3 < 500 && right_sensor_state4 > 500 && left_sensor_state1 
   
   }
 
-if(right_sensor_state3 < 500 && right_sensor_state4 < 500 && left_sensor_state1 < 500 && right_sensor_state2 > 500)
+if(right_sensor_state3 < 500 && right_sensor_state4 < 500 && left_sensor_state1 < 500 && left_sensor_state2 > 500)
 { 
   Serial.println("stop");
   
